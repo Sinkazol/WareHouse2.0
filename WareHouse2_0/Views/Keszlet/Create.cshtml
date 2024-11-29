@@ -1,0 +1,37 @@
+﻿@model Models.Stock
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2 ">
+            <h2 class="text-primary"> Új tétel </h2>
+            <hr />
+        </div>
+        <div class="mb-3 row p-1 ">
+            <label asp-for="WarehouseId">Telephely</label>
+            <input asp-for="WarehouseId" type="text" class="form-control" />
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="ProductId">Áru</label>
+            <input asp-for="ProductId" type="text" class="form-control" />
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Quantity">Mennyiség</label>
+            <input asp-for="Quantity" type="number" class="form-control" />
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+
+                <button type="submit" class="btn btn-primary form-control" style="width:150px">Hozzáad</button>
+            </div>
+            <div class="col-6">
+                <a asp-controller="Keszlet" asp-action="Index" class="btn btn-outline-secondary form-control" style="width:150px">
+                    Vissza
+                </a>
+
+            </div>
+        </div>
+
+
+    </div>
+</form>

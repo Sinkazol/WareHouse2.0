@@ -1,0 +1,36 @@
+﻿
+<div class="container">
+    <div class="row pt-4 pb-3">
+        <div class="col-6">
+            <h2 class="text-primary">Készlet lista</h2>
+
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="keszlet" asp-action="Create" class="btn btn-primary"> <i class="bi bi-plus-circle"></i> Új Tétel</a>
+        </div>
+    </div>
+    <table class="table table-bordered table-striped">
+        <thead>
+
+            <tr>
+                <th>Termek Neve</th>
+                <th>Termek Leírása</th>
+                <th>Termek Ára</th>
+                <th>Készlet</th>
+                <th>Telephely címe</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model)
+            {
+                <tr>
+                    <td>@obj.TermekNev</td>
+                    <td>@obj.TermekLeiras</td>
+                    <td>@obj.TermekAra Ft</td>
+                    <td>@obj.TermekMennyisege db</td>
+                    <td>@obj.TelephelyCime</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
